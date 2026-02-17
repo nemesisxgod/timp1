@@ -1,0 +1,44 @@
+:root { --bg:#0b1220; --card:#121b2e; --text:#e7eefc; --muted:#a9b7d6; --border:#22304f; }
+*{ box-sizing:border-box; }
+body{ margin:0; font-family:system-ui,Segoe UI,Roboto,Arial; background:linear-gradient(180deg,#070b14,#0b1220); color:var(--text); }
+.wrap{ max-width:1100px; margin:0 auto; padding:18px 16px; }
+header{ display:flex; gap:16px; align-items:flex-start; justify-content:space-between; }
+h1{ margin:0 0 6px; font-size:28px; }
+h2{ margin:0 0 14px; font-size:18px; }
+.muted{ color:var(--muted); }
+.small{ font-size:12px; }
+.grid{ display:grid; grid-template-columns:1fr 1.2fr; gap:16px; }
+.card{ background:rgba(18,27,46,.92); border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:0 10px 30px rgba(0,0,0,.25); }
+.form{ display:grid; gap:12px; }
+label{ display:grid; gap:6px; font-size:13px; }
+input, select, textarea{
+  width:100%; background:#0c1426; border:1px solid var(--border); color:var(--text);
+  border-radius:12px; padding:10px 12px; outline:none;
+}
+textarea{ resize:vertical; }
+.row{ display:flex; gap:10px; align-items:center; }
+.space{ justify-content:space-between; }
+button{
+  border:1px solid var(--border); background:#1a2a50; color:var(--text);
+  border-radius:12px; padding:10px 12px; cursor:pointer; font-weight:600;
+}
+button:hover{ filter:brightness(1.1); }
+button.secondary{ background:#152244; }
+button.danger{ background:#4b1a27; border-color:#6b2238; }
+.status{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+.pill{
+  border:1px solid var(--border); background:#0c1426; color:var(--muted);
+  padding:8px 10px; border-radius:999px; font-size:12px;
+}
+.log{ display:flex; flex-direction:column; gap:10px; }
+.item{
+  border:1px solid var(--border); background:#0c1426; border-radius:14px; padding:10px 12px;
+}
+.tag{ display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid var(--border); margin-right:8px; font-size:11px; color:var(--muted); }
+.badge{ float:right; font-size:11px; padding:2px 8px; border-radius:999px; border:1px solid var(--border); }
+.badge.LOW{ background:#102a1a; }
+.badge.MEDIUM{ background:#1f2a10; }
+.badge.HIGH{ background:#3a2a10; }
+.badge.CRITICAL{ background:#3b1212; border-color:#6b2238; }
+.meta{ margin-top:6px; font-size:12px; color:var(--muted); }
+@media (max-width: 980px){ .grid{ grid-template-columns:1fr; } }

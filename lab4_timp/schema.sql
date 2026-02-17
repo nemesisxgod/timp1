@@ -1,0 +1,52 @@
+-- PostgreSQL schema synchronized with SQLAlchemy models in backend/app/models.py
+
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    username VARCHAR(80) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    role VARCHAR(32) NOT NULL DEFAULT 'operator',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS facilities (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(120) NOT NULL UNIQUE,
+    address VARCHAR(255) NOT NULL,
+    security_level VARCHAR(20) NOT NULL DEFAULT 'medium',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS checkpoints (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    facility_id INTEGER NOT NULL REFERENCES facilities(id) ON DELETE CASCADE,
+    name VARCHAR(120) NOT NULL,
+    status VARCHAR(20) NOT NULL DEFAULT 'active',
+    zone VARCHAR(50) NOT NULL,
+    last_check_at TIMESTAMPTZ NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS incidents (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    facility_id INTEGER NOT NULL REFERENCES facilities(id) ON DELETE CASCADE,
+    author_id INTEGER NOT NULL REFERENCES users(id),
+    title VARCHAR(200) NOT NULL,
+    description TEXT NOT NULL,
+    severity VARCHAR(20) NOT NULL DEFAULT 'low',
+    status VARCHAR(20) NOT NULL DEFAULT 'open',
+    happened_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS security_plans (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    facility_id INTEGER NOT NULL REFERENCES facilities(id) ON DELETE CASCADE,
+    author_id INTEGER NOT NULL REFERENCES users(id),
+    title VARCHAR(200) NOT NULL,
+    description TEXT NOT NULL,
+    effective_from DATE NOT NULL,
+    effective_to DATE NOT NULL,
+    status VARCHAR(20) NOT NULL DEFAULT 'draft',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

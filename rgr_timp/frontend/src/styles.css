@@ -1,0 +1,113 @@
+﻿:root {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #1f2937;
+  background: linear-gradient(160deg, #f3f4f6, #e5e7eb);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #111827;
+  color: #f9fafb;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.header-right {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.link-button,
+button {
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.auth-card,
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.auth-card {
+  max-width: 500px;
+}
+
+.inline-form,
+.auth-card form {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0.8rem 0;
+}
+
+input,
+select {
+  padding: 0.55rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  min-width: 220px;
+}
+
+.alert {
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
+.info-box {
+  background: #e0e7ff;
+  color: #1e3a8a;
+  border-radius: 8px;
+  padding: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0.8rem 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.list li {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}

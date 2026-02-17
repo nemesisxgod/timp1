@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Пульт физической безопасности</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <div class="title">
+      <h1>Пульт физической безопасности</h1>
+      <p class="muted">Локальный ввод и журнал событий объекта.</p>
+    </div>
+
+    <div class="status">
+      <div class="pill" id="clockPill">Время</div>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card">
+      <h2>Добавить событие</h2>
+
+      <form id="eventForm" class="form">
+        <label>
+          Тип события
+          <select name="type" required>
+            <option value="DOOR_OPEN">Открытие двери</option>
+            <option value="DOOR_FORCED">Взлом двери</option>
+            <option value="MOTION">Движение в зоне</option>
+            <option value="ALARM">Тревога</option>
+          </select>
+        </label>
+
+        <label>
+          Зона/объект
+          <input name="zone" maxlength="64" required />
+        </label>
+
+        <label>
+          Критичность
+          <select name="severity" required>
+            <option value="LOW">Низкая</option>
+            <option value="MEDIUM" selected>Средняя</option>
+            <option value="HIGH">Высокая</option>
+            <option value="CRITICAL">Критическая</option>
+          </select>
+        </label>
+
+        <label>
+          Комментарий
+          <textarea name="note" rows="3" maxlength="300"></textarea>
+        </label>
+
+        <div class="row">
+          <button type="submit">Добавить событие</button>
+          <button type="button" class="danger" id="clearBtn">Очистить журнал</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Журнал событий</h2>
+      <div id="log" class="log"></div>
+    </section>
+  </main>
+
+  <footer class="wrap muted small">
+    <p>Данные сохраняются локально в браузере.</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
