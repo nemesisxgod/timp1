@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "id": "bfb2",
-      "type": "DOOR_OPEN",
-      "zone": "sfs",
-      "responsible": "Не указан",
-      "severity": "LOW",
-      "time": "24.02.2026, 15:00:56",
-      "comment": ""
-    },
-    {
       "id": "e740",
       "type": "DOOR_OPEN",
       "zone": "kpp1",
@@ -17,6 +8,60 @@
       "severity": "LOW",
       "time": "04.04.2026, 09:58:06",
       "comment": ""
+    },
+    {
+      "id": "e009",
+      "type": "DOOR_OPEN",
+      "zone": "kpp1",
+      "responsible": "Путин Владимир Владимирович",
+      "severity": "MEDIUM",
+      "time": "05.04.2026, 11:46:38",
+      "comment": ""
+    },
+    {
+      "id": "6474",
+      "type": "DOOR_OPEN",
+      "zone": "kpp2",
+      "responsible": "Трамп Дональд Батькович",
+      "severity": "CRITICAL",
+      "time": "05.04.2026, 11:48:37",
+      "comment": ""
+    },
+    {
+      "id": "fc36",
+      "type": "DOOR_OPEN",
+      "zone": "kpp3",
+      "responsible": "Уинстон Черчилль",
+      "severity": "LOW",
+      "time": "05.04.2026, 11:49:30",
+      "comment": ""
+    },
+    {
+      "id": "47e4",
+      "type": "DOOR_OPEN",
+      "zone": "kpp3",
+      "responsible": "Уинстон Черчилль",
+      "severity": "LOW",
+      "time": "05.04.2026, 11:49:41",
+      "comment": ""
+    },
+    {
+      "id": "33e7",
+      "type": "DOOR_OPEN",
+      "zone": "kpp3",
+      "responsible": "Уинстон Черчилль",
+      "severity": "LOW",
+      "time": "05.04.2026, 11:49:48",
+      "comment": ""
+    },
+    {
+      "id": "8024",
+      "type": "ACCESS_ATTEMPT",
+      "zone": "Склад А",
+      "responsible": "Баранов М.О.",
+      "severity": "LOW",
+      "time": "05.04.2026, 11:56:33",
+      "comment": "Неопознанный человек у входа."
     }
   ],
   "cameras": [
@@ -32,10 +77,10 @@
     {
       "id": "189b",
       "name": "cam1",
-      "state": "ONLINE",
+      "state": "OFFLINE",
       "location": "kpp1",
       "type": "FIXED",
-      "lastCheck": "04.04.2026, 09:57:16",
+      "lastCheck": "05.04.2026, 11:50:28",
       "comment": ""
     }
   ]

@@ -4,7 +4,7 @@ import axios from "axios";
 import "./common.css";
 import "./Detail.css";
 
-function Detail() {
+function Detail({ events, setEvents, cameras, setCameras }) {
   const { entity, id } = useParams();
   const entityType = entity || "events";
   const [item, setItem] = useState(null);
@@ -15,8 +15,19 @@ function Detail() {
   const isEvent = entityType === "events";
 
   useEffect(() => {
-    setItem(null);
     setError("");
+    const source = isEvent ? events : cameras;
+    const localItem = source.find((entry) => String(entry.id) === String(id));
+
+    if (localItem) {
+      setItem(localItem);
+      setSeverity(localItem.severity || "MEDIUM");
+      setCameraState(localItem.state || "ONLINE");
+      setComment(localItem.comment || "");
+      return;
+    }
+
+    setItem(null);
     axios
       .get(`http://localhost:5000/${entityType}/${id}`)
       .then((res) => {
@@ -28,7 +39,7 @@ function Detail() {
       .catch(() =>
         setError(isEvent ? "Событие не найдено." : "Камера не найдена.")
       );
-  }, [entityType, id, isEvent]);
+  }, [entityType, id, isEvent, events, cameras]);
 
   const handleSave = async () => {
     if (!item) return;
@@ -48,6 +59,11 @@ function Detail() {
         payload
       );
       setItem(res.data);
+      if (isEvent) {
+        setEvents((prev) => prev.map((entry) => (entry.id === res.data.id ? res.data : entry)));
+      } else {
+        setCameras((prev) => prev.map((entry) => (entry.id === res.data.id ? res.data : entry)));
+      }
     } catch {
       setError(
         isEvent ? "Не удалось обновить событие." : "Не удалось обновить камеру."

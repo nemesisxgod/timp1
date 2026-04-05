@@ -4,7 +4,7 @@ import axios from "axios";
 import "./common.css";
 import "./Form.css";
 
-function Form() {
+function Form({ setEvents, setCameras }) {
   const navigate = useNavigate();
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
@@ -36,7 +36,14 @@ function Form() {
           comment: comment.trim(),
         };
 
-    await axios.post(`http://localhost:5000/${entityType}`, payload);
+    const response = await axios.post(`http://localhost:5000/${entityType}`, payload);
+
+    if (isCamera) {
+      setCameras((prev) => [...prev, response.data]);
+    } else {
+      setEvents((prev) => [...prev, response.data]);
+    }
+
     navigate("/");
   };
 
