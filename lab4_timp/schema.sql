@@ -1,5 +1,3 @@
--- PostgreSQL schema synchronized with SQLAlchemy models in backend/app/models.py
-
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     username VARCHAR(80) NOT NULL UNIQUE,

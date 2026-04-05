@@ -28,6 +28,7 @@ def create_app():
     migrate.init_app(app, db)
     jwt.init_app(app)
     _configure_logging(app)
+    _ensure_tables_exist(app)
     _ensure_default_admin(app)
 
     app.register_blueprint(api)
@@ -35,6 +36,11 @@ def create_app():
     _register_jwt_handlers(jwt)
 
     return app
+
+
+def _ensure_tables_exist(app):
+    with app.app_context():
+        db.create_all()
 
 
 def _ensure_default_admin(app):

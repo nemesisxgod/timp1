@@ -1,0 +1,27 @@
+2026-02-19 09:33:18 CONNECT 127.0.0.1:33232
+2026-02-19 09:33:18 127.0.0.1:33232 :: GET / HTTP/1.1
+2026-02-19 09:33:18 127.0.0.1:33232 :: Host: localhost:5353
+2026-02-19 09:33:18 127.0.0.1:33232 :: User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0
+2026-02-19 09:33:18 127.0.0.1:33232 :: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2026-02-19 09:33:18 127.0.0.1:33232 :: Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+2026-02-19 09:33:18 127.0.0.1:33232 :: Accept-Encoding: gzip, deflate, br, zstd
+2026-02-19 09:33:18 127.0.0.1:33232 :: Connection: keep-alive
+2026-02-19 09:33:18 127.0.0.1:33232 :: Upgrade-Insecure-Requests: 1
+2026-02-19 09:33:18 127.0.0.1:33232 :: Sec-Fetch-Dest: document
+2026-02-19 09:33:18 127.0.0.1:33232 :: Sec-Fetch-Mode: navigate
+2026-02-19 09:33:18 127.0.0.1:33232 :: Sec-Fetch-Site: none
+2026-02-19 09:33:18 127.0.0.1:33232 :: Sec-Fetch-User: ?1
+2026-02-19 09:33:18 127.0.0.1:33232 :: Priority: u=0, i
+2026-02-19 09:33:18 CONNECT 127.0.0.1:33234
+2026-02-19 09:33:18 127.0.0.1:33234 :: GET /favicon.ico HTTP/1.1
+2026-02-19 09:33:18 127.0.0.1:33234 :: Host: localhost:5353
+2026-02-19 09:33:18 127.0.0.1:33234 :: User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0
+2026-02-19 09:33:18 127.0.0.1:33234 :: Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+2026-02-19 09:33:18 127.0.0.1:33234 :: Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+2026-02-19 09:33:18 127.0.0.1:33234 :: Accept-Encoding: gzip, deflate, br, zstd
+2026-02-19 09:33:18 127.0.0.1:33234 :: Connection: keep-alive
+2026-02-19 09:33:18 127.0.0.1:33234 :: Referer: http://localhost:5353/
+2026-02-19 09:33:18 127.0.0.1:33234 :: Sec-Fetch-Dest: image
+2026-02-19 09:33:18 127.0.0.1:33234 :: Sec-Fetch-Mode: no-cors
+2026-02-19 09:33:18 127.0.0.1:33234 :: Sec-Fetch-Site: same-origin
+2026-02-19 09:33:18 127.0.0.1:33234 :: Priority: u=6
