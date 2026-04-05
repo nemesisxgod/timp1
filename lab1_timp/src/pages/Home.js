@@ -192,9 +192,6 @@ function Home({
         <aside className="card home__analytics">
           <div className="home__analytics-header">
             <h2 className="card__title">Анализ событий по зонам</h2>
-            <p className="home__analytics-subtitle">
-              Вертикальная диаграмма показывает зоны с наибольшим количеством событий.
-            </p>
           </div>
 
           {isLoading ? (
