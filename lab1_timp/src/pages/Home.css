@@ -1,0 +1,151 @@
+.home {
+  min-height: 100vh;
+  padding: 24px 40px 56px;
+}
+
+.home__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.home__headline {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home__title {
+  font-size: 22px;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.home__time {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 16px;
+  background: rgba(23, 32, 58, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+}
+
+.home__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.event {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(9, 14, 30, 0.9);
+  margin-bottom: 12px;
+  color: inherit;
+}
+
+.event__meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.event__badge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event__badge--critical {
+  background: rgba(139, 37, 48, 0.6);
+  color: #ffd3d3;
+}
+
+.event__badge--medium {
+  background: rgba(80, 98, 22, 0.6);
+  color: #e2f4c1;
+}
+
+.event__badge--low {
+  background: rgba(26, 86, 132, 0.6);
+  color: #cfe9ff;
+}
+
+.event--empty {
+  text-align: center;
+}
+
+.event__title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.event__time {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.event--link {
+  display: block;
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+}
+
+.event--link:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn--small {
+  margin-top: 10px;
+  padding: 6px 10px;
+  font-size: 11px;
+  border-radius: 10px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.event-grid .event {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .home {
+    padding: 20px;
+  }
+
+  .home__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .home__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+}

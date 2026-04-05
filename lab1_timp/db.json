@@ -1,0 +1,42 @@
+{
+  "events": [
+    {
+      "id": "bfb2",
+      "type": "DOOR_OPEN",
+      "zone": "sfs",
+      "responsible": "Не указан",
+      "severity": "LOW",
+      "time": "24.02.2026, 15:00:56",
+      "comment": ""
+    },
+    {
+      "id": "e740",
+      "type": "DOOR_OPEN",
+      "zone": "kpp1",
+      "responsible": "Баранов Михаил Олегович",
+      "severity": "LOW",
+      "time": "04.04.2026, 09:58:06",
+      "comment": ""
+    }
+  ],
+  "cameras": [
+    {
+      "id": "077c",
+      "name": "kamera",
+      "state": "ONLINE",
+      "location": "kpp1",
+      "type": "PTZ",
+      "lastCheck": "10.03.2026, 12:56:16",
+      "comment": "kommentariy"
+    },
+    {
+      "id": "189b",
+      "name": "cam1",
+      "state": "ONLINE",
+      "location": "kpp1",
+      "type": "FIXED",
+      "lastCheck": "04.04.2026, 09:57:16",
+      "comment": ""
+    }
+  ]
+}
